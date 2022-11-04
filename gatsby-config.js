@@ -1,13 +1,18 @@
+const siteConfig = require('./config.js')
+
 module.exports = {
   siteMetadata: {
-    title: `Zach on Code`,
-    siteUrl: `https://zachoncode.dev`
+    title: siteConfig.title,
+    siteUrl: siteConfig.url,
   },
   plugins: [
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: 'gatsby-plugin-google-gtag',
       options: {
-        "trackingId": "G-S5HFKCRBH6"
+        trackingIds: [siteConfig.googleAnalyticsId],
+        pluginConfig: {
+          head: true
+        }
       }
     },
     "gatsby-plugin-image",
