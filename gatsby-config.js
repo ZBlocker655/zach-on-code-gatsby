@@ -40,6 +40,14 @@ module.exports = {
       __key: "pages"
     },
     "gatsby-plugin-mdx",
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'content',
+        path: `${__dirname}/content/`
+      },
+      __key: "content"
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
   ]
