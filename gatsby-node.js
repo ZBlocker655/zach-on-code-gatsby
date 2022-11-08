@@ -80,3 +80,32 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       });
     });
 }
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+
+  createTypes(`
+    type SiteSiteMetadata {
+      title: String
+      description: String
+      siteUrl: String
+    }
+
+    type Mdx implements Node {
+      frontmatter: Frontmatter
+      fields: Fields
+    }
+
+    type Frontmatter {
+      title: String
+      description: String
+    }
+
+    type Fields {
+      slug: String
+      contentKey: String
+      date: Date @dateformat
+      sequence: String
+    }
+  `)
+}

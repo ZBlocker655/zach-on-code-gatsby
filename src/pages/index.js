@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Layout from '../components/layout'
-import PageTitle from '../components/pageTitle'
+import Seo from '../components/seo'
 
 const IndexPage = () => {
   return (
@@ -12,4 +12,4 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export const Head = () => <PageTitle title="Home Page" />
+export const Head = () => <Seo title="Home Page" />
