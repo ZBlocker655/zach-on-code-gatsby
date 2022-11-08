@@ -3,7 +3,7 @@ const siteConfig = require('./config.js')
 module.exports = {
   siteMetadata: {
     title: siteConfig.title,
-    description: "Zach Blocker's professional portfolio and blog",
+    description: siteConfig.description,
     siteUrl: siteConfig.url,
   },
   plugins: [
@@ -21,7 +21,14 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        "icon": `${__dirname}/src/images/icon.png`
+        name: siteConfig.title,
+        short_name: siteConfig.title,
+        description: siteConfig.description,
+        lang: `en`,
+        start_url: '/',
+        background_color: `#ffffff`,
+        display: `minimal-ui`,
+        icon: `${__dirname}/src/images/icon.png`
       }
     },
     {
@@ -100,7 +107,7 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: "Zach on Code Blog",
+            title: `${siteConfig.title} Blog`,
           }
         ]
       }
