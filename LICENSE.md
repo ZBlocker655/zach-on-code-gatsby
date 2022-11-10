@@ -8,6 +8,10 @@ All the files inside `content` directory are licensed under
 2. The following message is displayed above and below the article:
    `This article has been originally published on the <a href="https://zachoncode.dev/">Zach on Code website</a>.`
 
+# Images
+
+All the files inside `src/images/photos` and `src/images/logos` directories are copyrighted to Zachary Blocker. All rights reserved.
+
 # Other files
 
 Files not mentioned in previous paragraphs are licensed under MIT License.
